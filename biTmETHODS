@@ -1,0 +1,35 @@
+BIT MANIPULATION
+
+SET BIT 
+CLEAR BIT 
+FIND ITH BIT
+
+
+
+// User function Template for Java
+
+class Solution {
+    static void bitManipulation(int num, int i) {
+        // code here
+        int n=( num >> (i-1) ) & 1;
+        System.out.print(n!=0 ? 1:0);
+        
+        System.out.print(" " + (num | (1 << (i -1))));
+        // System.out.print(" " + (num | (1 << (i - 1))));
+        
+        
+        System.out.print(" " + (num & (~(1 << (i - 1)))));
+        // System.out.print(" " + (num & (~(1 << (i - 1)))));
+        
+        
+    }
+   
+   
+    
+   
+}Input: 70 3
+Output: 1 70 66
+Explanation: Bit at the 3rd position from LSB is 1. (1 0 0 0 1 1 0) .The value of the given number after setting the 3rd bit is 70. The value of the given number after clearing 3rd bit is 66. (1 0 0 0 0 1 0)
+Input: 8 1
+Output: 0 9 8
+Explanation: Bit at the first position from LSB is 0. (1 0 0 0)  .The value of the given number after setting the 1st bit is 9. (1 0 0 1).  The value of the given number after clearing 1st bit is 8. (1 0 0 0)
